@@ -88,6 +88,10 @@ app: FastAPI = FastAPI(
 def root():
     return {"message": "Bienvenidos alumnos de Tecmilenio!"}
 
+@app.get("/hello")
+def root():
+    return {"message": "Hola Carola!!"}
+
 @app.get("/isAlive", response_model=HealthResponse)
 def is_alive() -> HealthResponse:
     """
